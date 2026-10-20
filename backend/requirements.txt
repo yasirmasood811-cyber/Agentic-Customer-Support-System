@@ -1,0 +1,26 @@
+# LangChain + LangGraph (agents, tools, RAG)
+langchain
+langgraph
+langchain-core
+langchain-google-genai
+langchain-chroma
+langchain-community
+langchain-text-splitters
+
+# RAG: local embeddings (no API key)
+sentence-transformers
+langchain-huggingface
+chromadb
+
+# Backend
+fastapi
+uvicorn[standard]
+python-dotenv
+pydantic
+
+# Database (PostgreSQL)
+sqlalchemy
+psycopg2-binary
+
+# Payments (Stripe test mode)
+stripe

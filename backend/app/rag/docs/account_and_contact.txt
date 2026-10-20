@@ -1,0 +1,14 @@
+SHOPEASE ACCOUNT AND CONTACT INFORMATION
+
+Updating account details
+Customers can ask the assistant to update their phone number or shipping address. Email address changes require verification and are handled by a human agent.
+
+Support hours
+The AI assistant is available 24/7. Human support agents are available Monday to Saturday, 9 AM to 6 PM Pakistan time.
+
+Escalation to a human agent
+The assistant escalates to a human agent when: the customer is angry or asks for a human; the issue involves legal threats, fraud, or payment disputes; a refund above 200 USD is requested; or the assistant cannot resolve the problem. A ticket is created with the full conversation context, and a human agent replies within 24 hours.
+
+Contact
+Email: support@shopease.example
+Phone: 021-111-000-111 (human agents, support hours only)

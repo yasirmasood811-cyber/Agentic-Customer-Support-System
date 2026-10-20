@@ -1,0 +1,24 @@
+# ---- secrets: NEVER commit these ----
+.env
+.env.*
+!.env.example
+
+# ---- Python ----
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# ---- local data ----
+chroma_db/
+*.db
+*.sqlite3
+
+# ---- Node ----
+node_modules/
+dist/
+
+# ---- editor / OS ----
+.vscode/
+.DS_Store
+Thumbs.db
