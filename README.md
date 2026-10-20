@@ -2,7 +2,7 @@
 
 An AI support assistant that does more than chat. It understands a customer's message, finds answers in a company knowledge base (RAG), and performs real actions: it checks orders, issues refunds (Stripe test mode), updates records and sends emails. Routine cases are handled without a human. Complex or sensitive cases are escalated to a human agent as a ticket with full context.
 
-> Author: `<your name>`  |  Course: `<course name>`  |  Final project
+> Author: `M.Yasir Masood`  |  Course: `Agentic AI`  |  Final project
 
 ## 1. The problem
 
