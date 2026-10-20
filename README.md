@@ -296,7 +296,3 @@ The architecture (router + specialised agents, business rules inside the tools, 
 3. **Growth:** live hand-over, cancel and return flows, evaluation dashboard, more languages.
 
 The single most important lesson: **authorization must live in code, not in the prompt.** The LLM decides what to say and which tool to try; the tool decides whether the logged-in customer is allowed to do it.
-
-## 11. Demo and viva
-
-See [docs/DEMO_SCRIPT.md](docs/DEMO_SCRIPT.md) for a step by step demo and likely questions with answers.
