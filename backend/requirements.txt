@@ -20,7 +20,7 @@ pydantic
 
 # Database (PostgreSQL)
 sqlalchemy
-psycopg2-binary
+psycopg[binary]
 
 # Payments (Stripe test mode)
 stripe
