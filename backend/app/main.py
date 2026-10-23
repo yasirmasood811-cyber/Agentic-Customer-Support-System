@@ -26,11 +26,13 @@ from app.streaming import chat_events
 
 
 def _warm_up():
-    """Load the embedding model in the background so the first chat is not slow."""
+    """Build the knowledge base if it is empty (cloud hosts start with an empty disk), then warm the retriever."""
+    from app.rag.ingest import ensure_knowledge_base
+    ensure_knowledge_base()
     try:
         from app.tools.kb_tools import _retriever
         _retriever()
-    except Exception as e:  # e.g. docs not ingested yet
+    except Exception as e:
         print(f"[warm-up skipped] {e}")
 
 

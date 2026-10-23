@@ -2,7 +2,7 @@
 
 An AI support assistant that does more than chat. It understands a customer's message, finds answers in a company knowledge base (RAG), and performs real actions: it checks orders, issues refunds (Stripe test mode), updates records and sends emails. Routine cases are handled without a human. Complex or sensitive cases are escalated to a human agent as a ticket with full context.
 
-> Author: `M.Yasir Masood`  |  Course: `Agentic AI`  |  Final project
+> Author: `<your name>`  |  Course: `<course name>`  |  Final project
 
 ## 1. The problem
 
@@ -209,7 +209,7 @@ UPDATE tickets   SET contact_email = 'your_inbox@gmail.com' WHERE customer_id = 
 
 Emails must be unique per customer. Gmail delivers `yourname+sara@gmail.com` to the same inbox.
 
-New orders and customers can be added without SQL: open the Admin page, **Orders** tab, **+ Add order**. By default this also creates a **Stripe test payment** for the order and stores its id (shown in the Payment column), so a later refund from the chat refunds that payment. If Stripe is not reachable the order is still saved and a yellow warning is shown; the seed orders (1001 to 1005) have no payment of their own. For everything else in pgAdmin see [docs/PGADMIN_GUIDE.md](docs/PGADMIN_GUIDE.md).
+New orders and customers can be added without SQL: open the Admin page, **Orders** tab, **+ Add order**. The box **Customer already paid by card** is ticked by default: it creates a **Stripe test payment** for the order (as a card checkout would) and stores its id; untick it for a cash-on-delivery order (shown in the Payment column), so a later refund from the chat refunds that payment. If Stripe is not reachable the order is still saved and a yellow warning is shown; the seed orders (1001 to 1005) have no payment of their own. For everything else in pgAdmin see [docs/PGADMIN_GUIDE.md](docs/PGADMIN_GUIDE.md).
 
 ## 7. API
 
@@ -278,6 +278,8 @@ The architecture (router + specialised agents, business rules inside the tools, 
 
 ### 10.4 Deployment
 
+- **This branch (`deploy`) runs on free cloud hosts.** Step-by-step setup (Neon, Brevo, Render, Vercel) is in [docs/DEPLOY_GUIDE.md](docs/DEPLOY_GUIDE.md).
+
 - Docker images for backend and frontend, a reverse proxy (Nginx or Caddy), managed PostgreSQL, and a host such as Render, Railway, AWS or Azure.
 - Keep proxy buffering off and timeouts long for streaming (the app already sends `X-Accel-Buffering: no`).
 - CI/CD (for example GitHub Actions) that runs the tests, a staging environment, and monitoring (Sentry, logs, LangSmith). Plan memory for the embedding model (a few hundred MB).
@@ -296,3 +298,7 @@ The architecture (router + specialised agents, business rules inside the tools, 
 3. **Growth:** live hand-over, cancel and return flows, evaluation dashboard, more languages.
 
 The single most important lesson: **authorization must live in code, not in the prompt.** The LLM decides what to say and which tool to try; the tool decides whether the logged-in customer is allowed to do it.
+
+## 11. Demo and viva
+
+See [docs/DEMO_SCRIPT.md](docs/DEMO_SCRIPT.md) for a step by step demo and likely questions with answers.

@@ -1,0 +1,24 @@
+# Light dependency list for a small cloud server (no torch, no chromadb).
+# Build command on the host:  pip install -r requirements-deploy.txt
+
+# LangChain + LangGraph (agents, tools, RAG)
+langchain
+langgraph
+langchain-core
+langchain-google-genai
+langchain-text-splitters
+numpy
+
+# Backend
+fastapi
+uvicorn[standard]
+python-dotenv
+pydantic
+requests
+
+# Database (PostgreSQL)
+sqlalchemy
+psycopg2-binary
+
+# Payments (Stripe test mode)
+stripe
